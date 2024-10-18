@@ -1,0 +1,135 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins',sans-serif;
+}
+:root{
+    --fundo: rgb(26, 26, 26);
+    --cor-botao: rgb(20, 20, 20);
+    --cor-borda: rgb(46, 46, 46);
+    --cor-texto: rgb(199, 197, 197);
+    --ativar: rgb(51, 238, 51);
+}
+textarea:focus, input:focus {
+    outline: 0;
+}
+body{
+    height: 100vh;
+    background: var(--fundo);
+    transition: 2s;
+}
+.navbar{ 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.digitar{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    border-radius: 15px;
+    background: var(--cor-borda);
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-texto);
+}
+#pesquisa{
+    width: 100%;
+    height: 40px;
+    margin: 0px 0px 0px 20px;
+    background: transparent;
+    border: none;
+    color: var(--cor-texto);
+    font-size: 18px;
+}
+#botao{
+    margin: 0px 20px 0px 0px;
+    cursor: pointer;
+}
+#botao:active{
+    transform: scale(1.2);
+}
+.tema{
+    display: flex;
+    justify-content: center;
+}
+#botao-tema{
+    color: var(--cor-texto);
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 50%;
+    overflow: hidden;
+}
+#botao-tema{
+    font-size: 40px;
+    margin: 10px;
+}
+.bi-brightness-high-fill{
+    animation: rodar linear infinite 2s;
+}
+.bi-moon-fill{
+    animation: mexer linear infinite 5s;
+}
+@keyframes rodar{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes mexer{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(0px, 10px) rotate(25deg);
+    }
+    75%{
+        transform: translate(0px,-10px) rotate(-25deg);
+    }
+}
+.box{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.filmes{
+    display: flex;
+    flex-direction: column;
+    border: solid var(--cor-borda);
+    margin: 20px;
+    border-radius: 15px;
+    justify-content: center;
+    color: var(--cor-texto);
+    align-items: center;
+    width: 25%;
+    transition: 1s;
+}
+.filmes:hover{
+    background: var(--cor-texto);
+    color: var(--cor-borda);
+    cursor: pointer;
+}
+.filmes img{
+    width: 90%;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.filmes h2{
+    margin: 20px 20px 10px 20px;
+}
+.filmes h3{
+    margin: 0px 0px 20px 0px;
+}
